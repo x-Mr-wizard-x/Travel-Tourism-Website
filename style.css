@@ -419,3 +419,294 @@ header {
     color: #cccccc;
     font-size: 14px;
 }
+/* 9. ABOUT SECTION */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    background: var(--light);
+}
+
+.about-tag {
+    color: #ad8549;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-content > p:not(.about-tag) {
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.about-content .primary-btn {
+    margin-top: 15px;
+}
+
+.about-image img {
+    height: 450px;
+    box-shadow: 20px 20px 0 var(--gold);
+}
+
+
+/* 10. TESTIMONIALS */
+
+.testimonials {
+    background: var(--white);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: var(--light);
+    padding: 35px 28px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+}
+
+.testimonial-card > p {
+    color: #555555;
+    font-size: 15px;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.testimonial-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.testimonial-card span {
+    color: #d6a347;
+    letter-spacing: 3px;
+}
+
+
+/* 11. CONTACT SECTION */
+
+.contact {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.contact .section-heading h2 {
+    color: var(--white);
+}
+
+.contact .section-heading span {
+    color: #cccccc;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.contact-info > div {
+    padding: 30px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
+}
+
+.contact-info > div:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.contact-info h3 {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+
+/* 12. FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #090e0b;
+    color: var(--white);
+}
+
+.footer .logo {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.footer > p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.footer .copyright {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid #303630;
+    font-size: 12px;
+}
+
+
+/* 13. ANIMATIONS */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 14. TABLET RESPONSIVENESS */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        width: 94%;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .destination-grid,
+    .package-grid,
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        gap: 40px;
+    }
+
+}
+
+
+/* 15. MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        min-height: 90vh;
+        padding: 180px 7% 80px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 70px 7%;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .destination-grid,
+    .package-grid,
+    .experience-grid,
+    .testimonial-grid,
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        height: 300px;
+    }
+
+    .package-card img {
+        height: 230px;
+    }
+
+    .experience-card img {
+        height: 230px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-image img {
+        height: 300px;
+        box-shadow: 10px 10px 0 var(--gold);
+    }
+
+    .contact-info {
+        gap: 15px;
+    }
+
+}
+
