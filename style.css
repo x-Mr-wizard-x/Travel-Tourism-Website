@@ -710,3 +710,21 @@ header {
 
 }
 
+/* JavaScript Scroll Reveal Animation */
+
+.destination-card,
+.package-card,
+.experience-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+.destination-card.show,
+.package-card.show,
+.experience-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
